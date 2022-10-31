@@ -1,0 +1,141 @@
+$font:'Open Sans',sans-serif;
+$opacity-value:0.5;
+$none:none;
+$value-10:10px;
+$color-white:white;
+$color-grey:rgb(211, 213, 215);
+$color-purple: rgb(154, 91, 226);
+
+*{
+	list-style: $none;
+	font-family: $font;
+}
+
+span#tabs{
+  opacity: 0.6;
+
+  #tabs:hover{
+    opacity:$opacity-value;
+  }
+
+}
+
+.item{
+	opacity: $opacity-value;
+}
+
+div{
+
+  .col{
+	margin: $value-10;
+  }
+
+  .container{
+    background-color:rgba(239, 235, 232, 0.8); 
+    border: 3px solid rgba(6, 135, 248, 0.9); 
+  }
+
+  .effect a{
+    display: block;
+    padding: 8px 16px;
+    text-decoration: $none;
+    width: 200px;
+    height: 40px;
+    border-radius: $value-10;
+    color: black;
+  }
+
+  .effect a:hover{
+    color:$color-white;
+    background-color: rgb(154, 91, 226);
+    transition: 0.5s;
+  }
+
+  .col-md-6{
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color:$color-white;
+  }
+
+  .review a{
+    text-decoration:$none;
+  }
+  
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  margin-left: 50px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:$color-grey;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+  .slider:before {
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    left: 1px;
+    bottom: 2px;
+    background-color:$color-white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+}
+
+  
+input:checked + .slider {
+  background-color:$color-purple;
+}
+  
+input:focus + .slider {
+  box-shadow: 0 0 1px $color-grey;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+ 
+.slider.round {
+  border-radius: 34px;
+}
+  
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.diamond-shape {
+  background:$color-purple;
+  text-align: center;
+  transform:rotate(45deg);
+  width:40px;
+  border-radius: 20%;
+}
+
+.item-count {
+  color: $color-white;
+  display: table-cell;
+  height: 40px;
+  transform: rotate(-45deg);
+  vertical-align: middle;
+  width:40px;
+}
