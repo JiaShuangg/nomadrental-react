@@ -1,0 +1,136 @@
+* {
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+span#tabs {
+  opacity: 0.6;
+}
+
+span#tabs #tabs:hover {
+  opacity: 0.5;
+}
+
+.item {
+  opacity: 0.5;
+}
+
+div .col {
+  margin: 10px;
+}
+
+div .container {
+  background-color: rgba(239, 235, 232, 0.8);
+  border: 3px solid rgba(6, 135, 248, 0.9);
+}
+
+div .effect a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  color: black;
+}
+
+div .effect a:hover {
+  color: white;
+  background-color: rgb(154, 91, 226);
+  transition: 0.5s;
+}
+
+div .col-md-6 {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+div .review{
+  background-color:rgb(247, 248, 249);
+}
+
+div .review a {
+  text-decoration: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  margin-left: 50px;
+}
+
+.switch p{
+  padding-left:50px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(211, 213, 215);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 1px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(154, 91, 226);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(211, 213, 215);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.diamond-shape {
+  background: rgb(154, 91, 226);
+  text-align: center;
+  transform: rotate(45deg);
+  width: 40px;
+  border-radius: 20%;
+}
+
+.item-count {
+  color: white;
+  display: table-cell;
+  height: 40px;
+  transform: rotate(-45deg);
+  vertical-align: middle;
+  width: 40px;
+}
