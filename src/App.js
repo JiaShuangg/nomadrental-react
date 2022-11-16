@@ -2,7 +2,7 @@ import './Booking.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.min.css'
 
-import MainRouter from './Components/router'
+import MainRouter from './router'
 import {BrowserRouter} from  "react-router-dom";
 
 

@@ -1,9 +1,9 @@
+import React , { useEffect } from 'react'
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
-import HOC from '../HOC'
+import withHOC from './actions'
 
-const Table = () => {
-  const{data}=HOC("https://rickandmortyapi.com/api/character");
+const Table = (props) => {
 
   const columns = [{  
       Header: 'ID',  
@@ -27,12 +27,16 @@ const Table = () => {
       Header: 'Status',  
       accessor: 'status'
     }
-  ]  
-  
-  return (
+  ] 
+
+  useEffect(() => {
+    props.getCharacters()
+  },[])
+
+  return(
     <div>
       <ReactTable
-        data={data.results||[]}
+        data={props.characters}
         columns={columns}
         pageSize={10}
         NoDataComponent={ () => <span></span> }
@@ -41,4 +45,4 @@ const Table = () => {
   )
 }
 
-export default Table
+export default withHOC(Table)
