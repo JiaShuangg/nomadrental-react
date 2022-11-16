@@ -1,16 +1,21 @@
-import './Booking.css';
-import Layout from './Components/ClassComponents';
-import "bootstrap/dist/css/bootstrap.min.css"
+import './Booking.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.min.css'
 
-function ChangeWord() {
+import MainRouter from './router'
+import {BrowserRouter} from  "react-router-dom";
+
+
+function App() {
   return (
-  <>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
-  <Layout/>
-  </>
-  );
+    <>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+      <BrowserRouter>
+        <MainRouter/>
+      </BrowserRouter>
+    </>
+  )
 }
 
-export default ChangeWord;
+export default App
